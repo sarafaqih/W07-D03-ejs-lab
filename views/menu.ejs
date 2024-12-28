@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+</head>
+<style>
+    h2{
+        color: blue
+    }
+</style>
+<body>
+    <%- include('./partials/nav') %>
+  <h1>Full Menu</h1>
+  <h2>Mains</h2>
+  <% menu.forEach((item) => { %>
+    <% if (item.category === 'mains'){ %>
+
+    <h3> Item Name: <%= item.name %>  </h3>
+    <h3> Item Price: <%= item.price %>  </h3>
+    <h3> Item Rating: <%= item.rating %>  </h3>
+    <h3> Item Category: <%= item.category %>  </h3>
+    <h3> Item Details: <%= item.details %>  </h3>
+    <% }%> 
+
+  <%})%>
+
+  <h2>Desserts</h2>
+  <% menu.forEach((item) => { %>
+    <% if (item.category === 'desserts'){ %>
+
+    <h3> Item Name: <%= item.name %>  </h3>
+    <h3> Item Price: <%= item.price %>  </h3>
+    <h3> Item Rating: <%= item.rating %>  </h3>
+    <h3> Item Category: <%= item.category %>  </h3>
+    <h3> Item Details: <%= item.details %>  </h3>
+    <% }%> 
+
+  <%})%>
+
+  <h2>Sides</h2>
+  <% menu.forEach((item) => { %>
+    <% if (item.category === 'sides'){ %>
+
+    <h3> Item Name: <%= item.name %>  </h3>
+    <h3> Item Price: <%= item.price %>  </h3>
+    <h3> Item Rating: <%= item.rating %>  </h3>
+    <h3> Item Category: <%= item.category %>  </h3>
+    <h3> Item Details: <%= item.details %>  </h3>
+    <% }%> 
+
+  <%})%>
+
+
+
+</body>
+</html>
